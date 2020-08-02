@@ -1,1 +1,1 @@
-# kavya9678-Fullstack-1
+This Repository contains my Stack Practicals
