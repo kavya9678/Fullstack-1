@@ -3,128 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>  
-        #container{
-            width: 100vw;
-            border:10px solid whitesmoke;
+    <title>Practical-7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            
         }
-      
-        #header{
-            margin: auto auto;
-            padding: 15px;
-            background-color: lightgray;
+
+        .container {
+            border: solid;
+            border-color: rgb(240, 240, 240);
+            box-shadow: 0px 0px 1px 1px rgb(172, 172, 172);
+            border-width: 10px;
+            margin: 20px auto;
+            padding: 10px;
+            width: 1020px;
+            
+        }
+
+        .header {
+            background-color: gray;
             color: white;
-            font-weight: bolder;
-            font-size: larger;
-            display:flex ;
+            height: 70px;
+            width: 100%;
+            display: flex;
             justify-content: center;
             align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            margin-bottom: 10px;
         }
-        #banner{
-            margin-top: 5px;
-            margin-bottom: 5px;
-            padding: 15px;
+
+        .footer {
+            background-color: rgb(255, 166, 221);
+            color: white;
+            height: 70px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .banner {
             background-color: lightskyblue;
-            color:white;
-            font-weight: bolder;
-            font-size: larger;
-            height: 100vh;
-            display:flex ;
-            justify-content: center;
-            align-items: center;
-        }
-     
-        #circle{
-            height:200px;
-            width: 310px;
-            background-color: lightcoral;
-            border-radius: 50%;
-            display: inline-block;
-            margin-left: 20px;
-        }
-    
-        #left{
-            width:50%;
-            height:250px;
-            padding: 15px;
-            background-color: lightgray;
             color: white;
-            font-weight: bolder;
-            font-size: larger;
-            display:flex ;
+            height: 500px;
+            width: 100%;
+            display: flex;
             justify-content: center;
             align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .sec1 {
+            margin-left: 40px;
+            margin-right: 20px;
+        }
+
+        .cir1, .cir2, .cir3, .cir4 {
+            background-color: rgb(144, 255, 80);
+            height: 200px;
+            width: 20%;
+            border-radius: 200px;
+            margin: 20px;
             float: left;
-            margin: 5px 0px;
+            
         }
-        #right{
-            float:right;
-            width:45%;
-            margin-left: 5px;
-            margin-bottom: 5px;
-        }
-        #article{
-            display: block;
-            height:90px;
-            background-color: brown;
+
+        .left-bar {
+            background-color: lightslategray;
             color: white;
-            font-weight: bolder;
-            font-size: larger;
-            display:flex ;
+            display: flex;
             justify-content: center;
             align-items: center;
-            margin-top:5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 50%;
+            height: 320px;
+            float: left;
         }
-        #card{
-            width:300px;  
-            height:320px;         
-            background-color: palevioletred;
-            display: inline-block;
-            margin-left: 28px;
+
+        .right-bar {
+            height: 320px;
+            width: 48%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            float: right;
         }
-        #footer{
-            margin: auto auto;
-            padding: 15px;
-            background-color: black;
+
+        .art1, .art2, .art3 {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: lightsalmon;
             color: white;
-            font-weight: bolder;
-            font-size: larger;
-            display:flex ;
+            display: flex;
             justify-content: center;
             align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
         }
+
+        .sec3 {
+            margin-left: 40px;
+            margin-right: 20px;
+        }
+
+        .box1, .box2, .box3, .box4 {
+            background-color: orangered;
+            height: 250px;
+            width: 20%;
+            margin: 20px;
+            float: left;
+        }
+
     </style>
+
 </head>
 <body>
-    <div id="container">
-        <div id="header">Header</div>
-        <div id="banner">Banner</div>
-            <p style="text-align: center; font-weight: bolder; font-size: larger;">Section-1</p>
-        <div id="section-1">
-            <div id="circle"></div>
-            <div id="circle"></div>
-            <div id="circle"></div>
-            <div id="circle"></div>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="banner">Banner</div>
+        <h1>Section-1</h1>
+        <div class="sec1">
+            <div class="cir1"></div>
+            <div class="cir2"></div>
+            <div class="cir3"></div>
+            <div class="cir4"></div>
         </div>
-        <p style="text-align: center; font-weight: bolder; font-size: larger;">Section-2</p>
-        <div id="section-2">
-            <div id="left">Main Content</div>
-            <div id="right">
-                <div id="article">Article-1</div>
-                <div id="article">Article-2</div>
-                <div id="article">Article-3</div>
+        <h1>Section-2</h1>
+        <div class="sec2">
+            <div class="left-bar">Main Content</div>
+            <div class="right-bar">
+                <div class="art1">Article-1</div>
+                <div class="art2">Article-2</div>
+                <div class="art3">Article-3</div>
             </div>
         </div>
-        <p style="text-align: center; font-weight: bolder; font-size: larger;">Section-3</p>
-        <div id="section-3">
-            <div id="card"></div>
-            <div id="card"></div>
-            <div id="card"></div>
-            <div id="card"></div>
+        <h1>Section-3</h1>
+        <div class="sec3">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
         </div>
-        <p style="text-align: center; font-weight: bolder; font-size: larger;">Section-4</p>
-        <div id="footer">Footer</div>
+        <h1>Section-4</h1>
+        <div class="sec4">
+            <div class="footer">Footer</div>
+        </div>
+
     </div>
 </body>
 </html>
