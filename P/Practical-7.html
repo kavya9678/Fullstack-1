@@ -1,148 +1,130 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width , initial-scale=1.0">
-        <title>Practical-7</title>
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-            }
-            #header{
-                background-color: grey;
-                width: auto;
-                padding: 0.5em;
-                font-size: 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: white solid 5px;
-                color: white;
-            }
-            #banner{
-                background-color: teal;
-                font-size: 40px;
-                padding: 0.5em;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                border: white solid 5px;
-                height: 1000px;
-            }
-            #box-title{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 30px;
-                margin: 15px;
-                padding: 2px;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-            #section-1,#section-2, #section-3,#section-4{
-                justify-content: center;
-                align-items: center;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-            }
-            #section-1 div{
-                width: 250px;
-                height: 250px;
-                border-radius: 50%;
-                background-color: goldenrod;
-                display: inline-block;
-                justify-content: center;
-                align-items: center;
-                margin: 10px 40px 10px 40px;
-            }
-            
-            #section-2:after{
-                content: '';
-                display: block;
-                clear: both;
-            }
-            #leftside{
-                width: 50%;
-                height: 500px;
-                font-size: 40px;
-                background-color: gray;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: 15px;
-                color: white;
-                float: left;
-            }
-            #rightside{
-                width: 48%;
-                float: right;
-                display: flex;
-                flex-direction: column;
-            }
-            #column{
-                width: 100%;
-                height: 156.66px;
-                background-color:orangered;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                font-size: 40px;
-                margin-bottom: 15px;
-            }    
-            #section-3 div{
-                width: 300px;
-                height: 400px;
-                background-color: red;
-                display: inline-block;
-                justify-content: center;
-                align-items: center;
-                margin: 5px 30px 10px 30px;
-            }    
-            #footer{
-                background-color: orchid;
-                font-size: 40px;
-                padding: 0.5em;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: auto;
-                border: white solid 5px;
-                color: white;
-            }
-        </style>
-    </head> 
-    <body>
-        <div id="header">Header</div> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  
+        #container{
+            width: 100vw;
+            border:10px solid whitesmoke;
+        }
+      
+        #header{
+            margin: auto auto;
+            padding: 15px;
+            background-color: lightgray;
+            color: white;
+            font-weight: bolder;
+            font-size: larger;
+            display:flex ;
+            justify-content: center;
+            align-items: center;
+        }
+        #banner{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 15px;
+            background-color: lightskyblue;
+            color:white;
+            font-weight: bolder;
+            font-size: larger;
+            height: 100vh;
+            display:flex ;
+            justify-content: center;
+            align-items: center;
+        }
+     
+        #circle{
+            height:200px;
+            width: 310px;
+            background-color: lightcoral;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 20px;
+        }
+    
+        #left{
+            width:50%;
+            height:250px;
+            padding: 15px;
+            background-color: lightgray;
+            color: white;
+            font-weight: bolder;
+            font-size: larger;
+            display:flex ;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            margin: 5px 0px;
+        }
+        #right{
+            float:right;
+            width:45%;
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
+        #article{
+            display: block;
+            height:90px;
+            background-color: brown;
+            color: white;
+            font-weight: bolder;
+            font-size: larger;
+            display:flex ;
+            justify-content: center;
+            align-items: center;
+            margin-top:5px;
+        }
+        #card{
+            width:300px;  
+            height:320px;         
+            background-color: palevioletred;
+            display: inline-block;
+            margin-left: 28px;
+        }
+        #footer{
+            margin: auto auto;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            font-weight: bolder;
+            font-size: larger;
+            display:flex ;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">Header</div>
         <div id="banner">Banner</div>
-        <div id="box-title">Section-1</div>
+            <p style="text-align: center; font-weight: bolder; font-size: larger;">Section-1</p>
         <div id="section-1">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div> 
-        <div id="box-title">Section-2</div>
-        <div id="section-2">
-            <div id="leftside">Main Content</div>
-            <div id="rightside">
-                <div id="column">Article-1</div> 
-                <div id="column">Article-2</div> 
-                <div id="column">Article-3</div>
-                <div></div> 
-            </div>         
+            <div id="circle"></div>
+            <div id="circle"></div>
+            <div id="circle"></div>
+            <div id="circle"></div>
         </div>
-        <div id="box-title">Section-3</div>
+        <p style="text-align: center; font-weight: bolder; font-size: larger;">Section-2</p>
+        <div id="section-2">
+            <div id="left">Main Content</div>
+            <div id="right">
+                <div id="article">Article-1</div>
+                <div id="article">Article-2</div>
+                <div id="article">Article-3</div>
+            </div>
+        </div>
+        <p style="text-align: center; font-weight: bolder; font-size: larger;">Section-3</p>
         <div id="section-3">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div> 
-        <div id="box-title">Section-4</div>
-        <div id="section-4"></div>  
-        <div id="footer">Footer</div> 
-    </body>
-</html>     
+            <div id="card"></div>
+            <div id="card"></div>
+            <div id="card"></div>
+            <div id="card"></div>
+        </div>
+        <p style="text-align: center; font-weight: bolder; font-size: larger;">Section-4</p>
+        <div id="footer">Footer</div>
+    </div>
+</body>
+</html>
