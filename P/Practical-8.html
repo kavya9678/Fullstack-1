@@ -25,22 +25,6 @@
             top:0;
             z-index:5;
         }
-           .footer{
-            height:70px;
-            margin-top:10px;
-            padding: 15px;
-            background-color: black;
-            color: white;
-            font-weight: bolder;
-            font-size: larger;
-        }
-
-        #head {
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 40px;
-            margin-top: 120px;
-        }
         #banner{
             width:100%;
             margin-bottom: 15px;
@@ -190,11 +174,25 @@
         #header ul li a:hover{
             background-color:whitesmoke;
             color: black;
-        }    
+        }
+        #footer{
+            height:70px;
+            margin-top:10px;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            font-weight: bolder;
+            font-size: larger;
+        }
+        #footer div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
-     <div id="container">
+    <div id="container">
         <div id="header">
             <ul>
                 <li><a href="#">HOME</a></li>
@@ -274,13 +272,10 @@
                 </div>
             </div>
         </div>
-        <a name="contact"><h1 id="head">Contact</h1></a>
-        <div class="sec4">
-            <div class="footer">
-                <h3>Website Template for Practical-8 &copy; <a href="https://www.beta-labs.in/">Beta-Labs</a></h3>
-                <br>
-                <h4><a href="#">Back to top</a></h4>
-            </div>
+        <p style="text-align: center; font-weight: 80px; font-size: 30px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">CONTACT</p>
+        <div id="footer">
+               <div> Website template for Practical-8<a href="https://www.beta-labs.in/">@ Beta-labs</a></div>
+               <div><a href="#banner">Back to top</a></div>
         </div>
     </div>
 </body>
