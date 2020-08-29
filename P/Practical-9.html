@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Practical-9</title>
+
+  <style>
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-padding-top: 70px;
+      scroll-behavior: smooth;
+    }
+
+    #container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+
+    #header {
+      background-color: grey;
+      width: 100%;
+      height: 70px;
+      max-width: 1200px;
+      position: fixed;
+      top: 0;
+      height: 70px;
+    }
+
+    /* Navigation Menu  */
+    .menu {
+      list-style: none;
+      float: right;
+      padding: 0 20px;
+    }
+
+    .menu li {
+      display: inline-block;
+      line-height: 70px;
+    }
+
+    .menu li a {
+      transition: 0.4s;
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 0px 20px;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    .menu li a:hover {
+      color: black;
+      background-color: white;
+    }
+
+    .show-btn,
+    .hide-btn,
+    #chk {
+      font-size: 30px;
+      line-height: 70px;
+      color: white;
+      display: none;
+      float: right;
+      padding-right: 20px;
+    }
+
+    #banner {
+      width: 100%;
+      margin-top: 90px;
+      height: 680px;
+      margin-bottom: 15px;
+      display: flex;
+      font-size: 40px;
+      color: white;
+    }
+
+    #banner {
+      //background-image:;
+      background-size: cover;
+      background-position: center;
+    }
+
+    #banner h2 {
+      margin: 20px 20px;
+      color: #fff;
+    }
+   #section-1 {
+      width: 100%;
+      margin: 15px auto;
+    }
+
+    #section-1::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .circle img {
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+      background-color: goldenrod;
+      float: left;
+      margin-left: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+    }
+
+    /* -------------About Us-------------- */
+    #section-2::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    #left {
+      width: 50%;
+      height: 550px;
+      background-color: gray;
+      float: left;
+      color: #fff;
+    }
+
+    #left-p>h2 {
+      text-align: left;
+      margin: 10px 5px;
+    }
+
+    #left-p>p {
+      font-size: 20px;
+      padding: 10px;
+      text-align: justify;
+      line-height: 28px;
+    }
+
+    #right {
+      width: 48%;
+      height: 550px;
+      float: right;
+    }
+
+    .article {
+      height: 31%;
+      margin-bottom: 20px;
+      background-color: chocolate;
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      overflow: hidden;
+    }
+
+    #p1 {
+     // background-image: ;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #p2 {
+     // background-image:;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #p3 {
+     // background-image:;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    /* --------- Technologies Used------------ */
+    #section-3 {
+      width: 100%;
+      margin: 15px auto;
+    }
+
+    #section-3::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .card {
+      width: 20%;
+      float: left;
+      margin-left: 50px;
+      background-color: lightgrey;
+      border-radius: 8px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .card>img {
+      width: 100%;
+      margin-bottom: 10px;
+      height:150px;
+    }
+
+    .card>h4 {
+      margin: 0px 10px;
+      text-align: center;
+    }
+
+    .card>p {
+      margin: 10px;
+      font-size: 15px;
+      text-align: justify;
+      line-height: 25px;
+      color: white;
+    }
+
+    .card>a {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      color: #fff;
+      background-color: red;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: black;
+      font-size: 40px;
+      text-align: center;
+      padding: 25px 0px;
+    }
+
+    .card>a:hover {
+      background-color: blue;
+    }
+
+    /* -------Footer Section ------- */
+    #footer {
+      background-color: greenyellow;
+      height: 100px;
+    }
+
+    #footer>p {
+      font-size: 16px;
+      color: black;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* 1. First Break-point */
+    /* 801px - 1199px */
+
+    @media (min-width: 801px) and (max-width: 1199px) {
+      .menu {
+        list-style: none;
+        float: right;
+      }
+
+      .menu li {
+        line-height: 70px;
+        display: inline-block;
+      }
+
+      .menu li a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 0px 20px;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+
+      .menu li a:hover {
+        color: black;
+        background-color: white;
+      }
+
+      html {
+        scroll-padding-top: 70px;
+        scroll-behavior: smooth;
+      }
+
+      #container {
+        width: 100%;
+      }
+
+      .show-btn,.hide-btn,#chk {
+        font-size: 30px;
+        line-height: 70px;
+        color: white;
+        display: none;
+        float: right;
+        padding-right: 20px;
+      }
+
+      #header {
+        width: 100%;
+        background-color: grey;
+        position: fixed;
+        top: 0;
+        height: 70px;
+      }
+      #banner {
+        width: 100%;
+        margin-top: 90px;
+        height: 680px;
+        margin-bottom: 15px;
+        display: flex;
+        font-size: 40px;
+        color: white;
+      }
+
+      #banner {
+        //background-image: ;
+        background-size: cover;
+        background-position: center;
+      }
+
+      #banner h2 {
+        margin: 20px 20px;
+        color: #fff;
+      }
+
+
+      #section-1 {
+        width: 100%;
+      }
+
+      #section-1::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .circle img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        background-color: goldenrod;
+        float: left;
+        margin-left: 15%;
+        margin-bottom: 20px;
+      }
+
+      #section-2::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      #left {
+        width: 50%;
+        height: 550px;
+        background-color: gray;
+        float: left;
+        color: #fff;
+      }
+
+      #left-p>h2 {
+        text-align: left;
+        margin: 10px 5px;
+      }
+
+      #left-p>p {
+        font-size: 20px;
+        padding: 10px;
+        text-align: justify;
+        line-height: 28px;
+      }
+
+      #right {
+        width: 48%;
+        height: 550px;
+        float: right;
+      }
+
+      .article {
+        height: 31%;
+        margin-bottom: 20px;
+        background-color: chocolate;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        overflow: hidden;
+      }
+
+      #p1 {
+        background-image: url(images/Screenshot\ \(804\).png);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      #p2 {
+        //background-image:;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      #p3 {
+        //background-image: ;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      #section-3 {
+        width: 100%;
+        margin: 15px auto;
+      }
+
+      #section-3::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .card {
+        width: 40%;
+        float: left;
+        margin-left: 65px;
+        margin-bottom: 20px;
+        background-color: lightgrey;
+        border-radius: 8px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+      }
+
+      .card>img {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 20px;
+        height:150px;
+      }
+
+      .card>h4 {
+        margin: 0px 10px;
+        text-align: center;
+      }
+
+      .card>p {
+        margin: 10px;
+        font-size: 20px;
+        text-align: justify;
+        line-height: 30px;
+        color: white;
+      }
+
+      .card>a {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+        background-color: red;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      h1 {
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        padding: 25px 0px;
+      }
+
+      .card>a:hover {
+        background-color: blue;
+      }
+
+      #footer {
+        background-color:greenyellow;
+        height: 100px;
+      }
+
+      #footer>p {
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 20px;
+      }
+    }
+
+    /* 2. Second Break-point */
+
+    @media (max-width: 800px) {
+      #header {
+        width: 100%;
+        background-color: grey;
+        position: fixed;
+        top: 0;
+        height: 70px;
+      }
+
+      .show-btn {
+        display: block;
+      }
+
+      .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        padding: 80px 0px;
+        line-height: normal;
+        transition: 0.7s;
+      }
+
+      .menu li {
+        display: block;
+      }
+
+      .manu li a {
+        display: block;
+      }
+
+      #chk:checked~.menu {
+        right: 0;
+      }
+
+      .hide-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+
+      #banner {
+        width: 100%;
+        height: 350px;
+        margin-bottom: 15px;
+        display: flex;
+        font-size: 30px;
+        color: white;
+        margin-top: 90px;
+      }
+
+      #banner h2 {
+        margin: 10px 20px;
+        color: #fff;
+      }
+
+      #section-1 {
+        width: 100%;
+      }
+
+      #section-1::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .circle img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        float: left;
+        margin-left: 10%;
+        margin-bottom: 20px;
+      }
+
+      #left {
+        width: 100%;
+        height: 200px;
+        background-color: gray;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+
+      #left-p>h2 {
+        text-align: left;
+        margin: 5px 5px;
+      }
+
+      #left-p>p {
+        font-size: 20px;
+        padding: 10px;
+        text-align: justify;
+        line-height: 28px;
+      }
+
+      #right {
+        width: 100%;
+        height: 400px;
+      }
+
+      .article {
+        height: 31%;
+        margin-bottom: 20px;
+        background-color: chocolate;
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        overflow: hidden;
+      }
+
+      #p1 {
+        //background-image: ;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      #p2 {
+        //background-image: ;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      #p3 {
+        //background-image: ;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      #section-3 {
+        width: 100%;
+        margin: 15px auto;
+      }
+
+      #section-3::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .card {
+        width: 40%;
+        float: left;
+        margin-left: 50px;
+        background-color: lightgrey;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+      }
+
+      .card>img {
+        width: 100%;
+        margin-bottom: 10px;
+        height:150px;
+      }
+
+      .card>h4 {
+        margin: 0px 10px;
+        text-align: center;
+      }
+
+      .card>p {
+        margin: 10px;
+        font-size: 15px;
+        text-align: justify;
+        line-height: 25px;
+        color: white;
+      }
+
+      .card>a {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+        background-color: red;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      h1 {
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        padding: 25px 0px;
+      }
+
+      /* 3. Third Break-point */
+
+      @media (max-width: 625px) {
+        #container {
+          min-width: 320px;
+        }
+
+        .show-btn {
+          display: block;
+        }
+
+        .menu {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 100%;
+          background-color: #333;
+          text-align: center;
+          padding: 80px 0px;
+          line-height: normal;
+          transition: 0.7s;
+        }
+
+        .menu li {
+          display: block;
+        }
+
+        .manu li a {
+          display: block;
+        }
+
+        #chk:checked~.menu {
+          right: 0;
+        }
+
+        .hide-btn {
+          display: block;
+          position: absolute;
+          right: 20px;
+          top: 10px;
+        }
+
+        #banner {
+          width: 100%;
+          height: 250px;
+          margin-bottom: 15px;
+          color: white;
+          margin-top: 90px;
+        }
+
+        #banner h2 {
+          margin: 10px 20px;
+          color: #fff;
+          font-size: 20px;
+        }
+
+        #section-1 {
+          width: 90%;
+          margin-left: 10%;
+        }
+
+        .circle img {
+          height: 70%;
+          width: 70%;
+
+          border-radius: 50%;
+          margin-bottom: 20px;
+        }
+
+        #left {
+          width: 100%;
+          height: 200px;
+          background-color: gray;
+          color: #fff;
+          margin-bottom: 20px;
+        }
+
+        #left-p>h2 {
+          text-align: left;
+          margin: 5px 5px;
+        }
+
+        #left-p>p {
+          font-size: 20px;
+          padding: 10px;
+          text-align: justify;
+          line-height: 28px;
+        }
+
+        #right {
+          width: 100%;
+          height: 400px;
+        }
+
+        .article {
+          box-sizing: border-box;
+          height: 31%;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-family: Arial, Helvetica, sans-serif;
+          color: black;
+          overflow: hidden;
+        }
+
+        #p1 {
+         // background-image: ;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        #p2 {
+         // background-image:;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        #p3 {
+         // background-image:;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        #section-3 {
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        .card {
+          margin-left: 20px;
+          width: 90%;
+          background-color: lightgrey;
+          border-radius: 8px;
+          margin-bottom: 20px;
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+          max-height: 500px;
+        }
+
+        .card>img {
+          width: 100%;
+          margin-bottom: 10px;
+          padding: 20px;
+          height:300px;
+        }
+
+        .card>h4 {
+          margin: 0px 10px;
+          text-align: center;
+        }
+
+        .card>p {
+          margin: 10px;
+          font-size: 15px;
+          text-align: justify;
+          line-height: 25px;
+          color: white;
+        }
+
+        .card>a {
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+          color: #fff;
+          background-color: red;
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 8px;
+        }
+
+        h1 {
+          color: black;
+          font-size: 20px;
+          text-align: center;
+          padding-top: 25px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <input type="checkbox" id="chk" />
+      <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <ul class="menu">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#section-1">Team</a></li>
+        <li><a href="#Technologies">Technologies</a></li>
+        <li><a href="#contact">contact</a></li>
+
+        <label for="chk" class="hide-btn">
+          <i class="fa fa-times"></i>
+        </label>
+      </ul>
+    </div>
+    <a name="top"></a>
+
+    <div id="banner">
+      <h2>PRACTICAL - 9</h2>
+    </div>
+    <div id="section-1">
+      <h1>Team Members</h1>
+      <div class="circle">
+        <img src="" alt="" />
+      </div>
+      <div class="circle">
+        <img src="" alt="" />
+      </div>
+      <div class="circle">
+        <img src="" alt="" />
+      </div>
+      <div class="circle">
+        <img src="" alt="" />
+      </div>
+    </div>
+    <div id="section-2">
+      <a name="about"></a>
+      <h1>About Us</h1>
+      <div id="left">
+        <div class="left-content">
+          <div id="left-p">
+            <h2>About Projects</h2>
+            <p>
+              temporibus similique sit tenetur quasi exercitationem! Repella obcaecati quibusdam iste explicabo laborum veritatis velit
+              accusantium animi dolorum nemo ut quam, quo cum in suscipi fugiat minima corrupti voluptates tempora alias aspernatur esse
+              dolore iure? Libero iste quo nam sequi nulla, minima architecto est cum expedita omnis enim culpa reiciendis nesciunt quod
+              deserunt, nostrum corporis tempore impedit veritatis ut
+              perspiciatis rerum. Amet, harum pariatur. Quo dolorum necessitatibus eos beatae eveniet, earum cum blanditiis,
+              accusamus vitae, nisi voluptas dignissimos modi quibusdam au  veniam deserunt accusantium possimus atque? Distinctio voluptas
+              nemo, fuga laboriosam perspiciatis eum debitis nesciunt quidem iure ratione! Eaque ea eum maxime temporibus dolor nostrum, iure
+              enim, vero in atque quod animi! Mollitia alias magnam nisi suscipit ab ducimus dolores provident. Distinctio veritatis
+              quaerat explicabo fuga neque culpa facere suscipit vel, totam quasi!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div class="article" id="p1">
+          <h2>Project-1</h2>
+        </div>
+        <div class="article" id="p2">
+          <h2>Project-2</h2>
+        </div>
+        <div class="article" id="p3">
+          <h2>Project-3</h2>
+        </div>
+      </div>
+    </div>
+    <div id="section-3">
+      <a name="Technologies"></a>
+      <h1>Technologies Used</h1>
+      <div class="card">
+        <img src="images/html.png" alt="">
+        <h4>Introduction to HTML</h4>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, similique tenetur eaque est veniam quo sequi in, vero ducimus sit suscipit culpa,    minus iste     quibusdam obcaecati fugit?    Null Lorem ipsum dolor sit amet Lorem ipsum dolor si.
+        </p>
+
+        <a href="practical-5-html.html">Read More</a>
+      </div>
+      <div class="card">
+        <img src="images/css.png" alt="" />
+        <h4>Introduction to CSS</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eligendi soluta ipsa nemo excepturi perferendis in? Eos, nesciunt cumque. Temporibus ad voluptates mollitia deleniti eaque, voluptatem ullam sit amet Lorem ipsum dolor si.
+        </p>
+
+        <a href="Practical-5-css.html">Read More</a>
+      </div>
+      <div class="card">
+        <img src="images/js.jpg" alt="" />
+        <h4>Introduction to JavaScript</h4>
+        <p>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis accusantium, natus recusandae rerum quas laboriosam, numquam minima qui quae eos enim voluptas saepe officia suscipit animi eaque nostrum. Amet,  amet Lorem ipsum dolor si.
+        </p>
+
+        <a href="Practical-5-javascript.html">Read More</a>
+      </div>
+      <div class="card">
+        <img src="images/bs.png" alt="" />
+        <h4>Introduction to Bootstrap</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, illo! Tempore esse expedita molestias, maxime alias quisquam excepturi a culpa mollitia facilis veritatis voluptatibus, provident nobis ullam soluta earum sit amet Lorem .
+        </p>
+
+        <a href="Practical-5-bootstrap.html">Read More</a>
+      </div>
+    </div>
+    <a name="contact"></a>
+    <h1>Contact</h1>
+    <div id="footer">
+      <p>
+        Website Template for Practical-9 &copy;
+        <a href="https://beta-labs.in">Beta-labs</a><br /><br />
+        <a href="#top">Back to top</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>
