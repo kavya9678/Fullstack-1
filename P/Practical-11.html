@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        table,td,tr,th{
+            border: 1px ;
+            border-spacing: 10px; /*is irrelevant if we use border-collapse: ;*/
+            border-collapse: collapse;
+            padding:10px;
+            border:none;
+        }
+        a{
+            color:gray;
+        }
+        tr:hover{
+            background-color: lightgray;
+        }
+        table{
+            margin:20px auto;
+            text-align:center;
+        
+            width: 80%;
+            border: 3px solid;
+        }
+        caption{
+            caption-side: bottom;
+            margin-top: 10px;
+            font-size:medium;
+        }
+        th{
+            background-color:white;
+            border: none;
+            font-weight: bolder;
+        }
+    #check{
+        color:green;
+        font-weight: bold;
+    }
+    #check1{
+        color:red;
+        font-weight: bold;
+    }
+    #head{
+        border-bottom: 2px solid gray;
+    }
+    i{
+        padding-left: 10px;
+        color:lightgray;
+    }
+    i:hover{
+        color:blue;
+    }
+
+
+    </style>
+</head>
+<body>
+    <table align="center">
+        <caption>
+            This is the list of Practicals we have completed for Fullstack Course
+        </caption>
+        <!-- Columnwise selection -->
+        <thead>    <!--Semantic tag-->
+            <tr>
+                <th colspan="5" style="background-color:navy; color:white">FullStack Live Practical Book</th>
+            </tr>
+            </thead>
+        <tr id="head">
+            <th>#</th>
+           <th width="400px;" align="left">Practical Name</th>
+           <th>Link</th>
+           <th>Status</th>
+           <th>Tools</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td align="left">Create a Web page including HTML basic skeleton using Offline HTML Editor and Online Sandbox Environment.</td>
+            <td><a href="Practical-1.html">Practical-1</a></td>
+            <td id="check">Checked</td>
+            <td><a href="#"><acronym title="Edit"><i class="fa fa-pencil" class="tooltip" aria-hidden="true" style="font-size:25px;"></i></a>
+                <a href="#"><acronym title="Delete"><i class="fa fa-trash" aria-hidden="true" style="font-size:25px;"></i></acronym></a> </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td align="left">Live your First Web-Page on Git-Hub.</td>
+            <td><a href="Practical-2.html">Practical-2</a></td>
+            <td id="check">Checked</td>
+            <td><a href="#"><acronym title="Edit"><i class="fa fa-pencil" class="tooltip" aria-hidden="true" style="font-size:25px;"></i></a>
+                <a href="#"><acronym title="Delete"><i class="fa fa-trash" aria-hidden="true" style="font-size:25px;"></i></acronym></a> </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td align="left">Create a web page showing a basic html structure using characer Entities and Span tag.</td>
+            <td><a href="Practical-3.html">Practical-3</a></td>
+            <td id="check">Checked</td>
+            <td><a href="#"><acronym title="Edit"><i class="fa fa-pencil" class="tooltip" aria-hidden="true" style="font-size:25px;"></i></a>
+                <a href="#"><acronym title="Delete"><i class="fa fa-trash" aria-hidden="true" style="font-size:25px;"></i></acronym></a> </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td align="left">Create a website having list of all practical and their individual Page links.</td>
+            <td><a href="Practical-4.html">Practical-4</a></td>
+            <td id="check">Checked</td>
+            <td><a href="#"><acronym title="Edit"><i class="fa fa-pencil" class="tooltip" aria-hidden="true" style="font-size:25px;"></i></a>
+                <a href="#"><acronym title="Delete"><i class="fa fa-trash" aria-hidden="true" style="font-size:25px;"></i></acronym></a> </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td align="left">Create a Web-Page showing the use of Image-Map in the Web Application.</td>
+            <td><a href="Practical-5.html">Practical-5</a></td>
+            <td id="check">Checked</td>
+            <td><a href="#"><acronym title="Edit"><i class="fa fa-pencil" class="tooltip" aria-hidden="true" style="font-size:25px;"></i></a>
+                <a href="#"><acronym title="Delete"><i class="fa fa-trash" aria-hidden="true" style="font-size:25px;"></i></acronym></a> </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td align="left">Create following layout using CSS properties.</td>
+            <td><a href="Practical-6.html">Practical-6</a></td>
+            <td id="check">Checked</td>
+            <td><a href="#"><acronym title="Edit"><i class="fa fa-pencil" class="tooltip" aria-hidden="true" style="font-size:25px;"></i></a>
+                <a href="#"><acronym title="Delete"><i class="fa fa-trash" aria-hidden="true" style="font-size:25px;"></i></acronym></a> </td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td align="left"> Create a Web Page Layout using div tags.</td>
+            <td><a href="Practical-7.html">Practical-7</a></td>
+            <td id="check">Checked</td>
+            <td><a href="#"><acronym title="Edit"><i class="fa fa-pencil" class="tooltip" aria-hidden="true" style="font-size:25px;"></i></a>
+                <a href="#"><acronym title="Delete"><i class="fa fa-trash" aria-hidden="true" style="font-size:25px;"></i></acronym></a> </td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td align="left">Create a Web Page having Fixed Navigation Bar with the given content.</td>
+            <td><a href="Practical-8.html">Practical-8</a></td>
+            <td id="check">Checked</td>
+            <td><a href="#"><acronym title="Edit"><i class="fa fa-pencil" class="tooltip" aria-hidden="true" style="font-size:25px;"></i></a>
+                <a href="#"><acronym title="Delete"><i class="fa fa-trash" aria-hidden="true" style="font-size:25px;"></i></acronym></a> </td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td align="left">Create a Responsive Web layout with Responsive navigation bar.</td>
+            <td><a href="Practical-9.html">Practical-9</a></td>
+            <td id="check">Checked</td>
+            <td><a href="#"><acronym title="Edit"><i class="fa fa-pencil" class="tooltip" aria-hidden="true" style="font-size:25px;"></i></a>
+                <a href="#"><acronym title="Delete"><i class="fa fa-trash" aria-hidden="true" style="font-size:25px;"></i></acronym></a> </td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td align="left">Create a Responsive Side-Bar Navigation Menu. </td>
+            <td><a href="Practical-10.html">Practical-10</a></td>
+            <td id="check1">Un-Checked</td>
+            <td><a href="#"><acronym title="Edit"><i class="fa fa-pencil" class="tooltip" aria-hidden="true" style="font-size:25px;"></i></a>
+                <a href="#"><acronym title="Delete"><i class="fa fa-trash" aria-hidden="true" style="font-size:25px;"></i></acronym></a> </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
