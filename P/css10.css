@@ -1,0 +1,120 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    width:100%;
+    height:70px;
+    background-color: darkblue;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top:0;
+}
+.header img{
+    width:70px;
+    height:70px;
+    margin-right:20px;
+}
+.header h1{
+    line-height: 70px;
+    color:white;
+}
+.content{
+    width: 100%;
+    margin-top: 70px;
+    float: right;
+    transition: .7s;
+}
+.content img{
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    padding-top: 30px;
+}
+.content p{
+    padding: 15px;
+    text-align: justify;
+}
+.side-bar{
+    width: 20%;
+    height: 100%;
+    position:fixed;
+    top:70px;
+    background-color: #353b48;
+    left:-100%;
+    transition: .7s;
+}
+.side-bar ul{
+    list-style: none;
+}
+.side-bar ul li{
+    border-bottom : 2px solid rgba(255,255,255,0.1);
+}
+.side-bar ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px 25px;
+    transition: 0.4s;
+}
+a i{
+    margin-right: 15px;
+}
+.side-bar ul li a:hover{
+    border-left: 10px solid white;
+    color:skyblue;
+    transition: .7s;
+}
+.social{
+    margin-top:200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    font-size: 30px;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    border-top: 2px solid rgba(255,255,255,0.1);
+    padding: 15px 25px;
+}
+i{
+    font-size: 30px;
+    color: white;
+}
+.show-btn, .hide-btn{
+    font-size:35px;
+    color:white;
+    position: fixed;
+    top: 20px;
+    left :50px;
+}
+.hide-btn{
+    opacity: 0;
+}
+
+#chk:checked ~ .side-bar{
+    left:0;
+    top:70px;
+}
+#chk:checked ~ .show-btn{
+    opacity: 0;
+}
+#chk:checked ~ .hide-btn{
+    opacity: 1;
+}
+#chk:checked ~ .content{
+    width: 80%;
+}
+@media(max-width:768px){
+    .side-bar{
+        width:100%;
+        text-align:center;
+    }
+    .header h1{
+        display: none;
+    }
+}
