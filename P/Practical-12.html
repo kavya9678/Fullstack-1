@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            min-width: 100%;
+            background-color: lightgray;
+            font-weight: 40px;
+        }
+        .header{
+            width:600px;
+            background-color: white;
+            padding:10px;
+            margin:20px auto;
+        }
+        .custom{
+            width:100%;
+            margin:0 auto;
+            border-collapse: collapse;
+        }
+        .custom td, .custom th{
+            border-right: 2px solid white;
+            border-left: 2px solid white;
+            width:150px;
+            padding:8px 5px;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            margin:10px auto;
+        }
+        .custom th{
+            height:70px;
+            color:#64548f;
+            font-size: 28px;
+            }
+        i
+         {
+        color:navy;
+        font-size:28px;
+        margin-right: 10px;
+       }
+    tbody tr:nth-child(even){
+        background-color: #edf3e2;
+    }
+    thead tr:first-child th{
+        background-color: #edf3e2;
+    }
+  tfoot tr{
+    background-color: #edf3e2;
+  }
+        table{
+            margin:20px auto;
+            text-align:center;
+            width: 60%;
+        }
+        th{
+            background-color:white;
+            font-weight: bolder;
+        }
+    #check{
+        color:green;
+        font-weight: bold;
+    }
+    #cross{
+        color:red;
+        font-weight: bold;
+    }
+ 
+    tbody tr:first-child td{
+        font-size: 20px;
+        color:green;
+        
+    }
+    a{
+            margin:15px 10px;
+            display: block;
+            border-radius: 10px;
+            padding: 15px 10px;
+            text-align: center;
+            background-color:navy;
+            text-decoration: none;
+            color:white;
+            vertical-align: middle;
+    }
+    a:hover{
+        background-color: red;;
+    }
+        
+        .basic{
+            background-color: #c1dcb7;
+        }
+        .plus{
+            background-color: #bad6c8;
+        }
+        .deluxe{
+            background-color: #bbd3dc;
+        }
+        .pro{
+            background-color: #d5e4bc;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <h2>SELECT YOUR PLAN</h2>
+    <table align="center" class="custom">
+        <colgroup class="basic"></colgroup>
+        <colgroup class="plus"></colgroup>
+        <colgroup class="deluxe"></colgroup>
+        <colgroup class="pro"></colgroup>
+        <thead>    <!--Semantic tag-->
+        
+        <tr>
+           <th><i class="fa fa-building" aria-hidden="true"></i>Basic</th>
+           <th><i class="fa fa-superpowers" aria-hidden="true"></i>Plus</th>
+           <th><i class="fa fa-telegram" aria-hidden="true"></i>Deluxe</th>
+           <th><i class="fa fa-tachometer" aria-hidden="true"></i>Pro</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Rs. 500/-</td>
+            <td>Rs. 1500/-</td>
+            <td>Rs. 2500/-</td> 
+            <td>Rs. 3500/-</td>
+        </tr>
+        <tr>
+            <td>50 pages</td>
+            <td>75 pages</td>
+            <td>Unlimited</td> 
+            <td>Unlimited</td>
+        </tr>
+        <tr>
+            <td>3 users</td>
+            <td>5 users</td>
+            <td>10 users</td> 
+            <td>Unlimited</td>
+        </tr>
+        <tr>
+            <td>10 sites</td>
+            <td>25 sites</td>
+            <td>100 sites</td> 
+            <td>Unlimited</td>
+        </tr>
+        <tr>
+            <td>50 MB</td>
+            <td>250 MB</td>
+            <td>1 GB</td> 
+            <td>5 GB</td>
+        </tr>
+        <tr>
+            <td>included</td>
+            <td>included</td>
+            <td>included</td> 
+            <td>included</td>
+        </tr>
+        <tr>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+        </tr>
+        <tr>
+            <td><i class="fa fa-times" aria-hidden="true" id="cross"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+        </tr>
+        <tr>
+            <td><i class="fa fa-times" aria-hidden="true" id="cross"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+        </tr>
+        <tr>
+            <td><i class="fa fa-times" aria-hidden="true" id="cross"></i></td>
+            <td><i class="fa fa-times" aria-hidden="true" id="cross"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+        </tr>
+        <tr>
+            <td><i class="fa fa-times" aria-hidden="true" id="cross"></i></td>
+            <td><i class="fa fa-times" aria-hidden="true" id="cross"></i></td>
+            <td><i class="fa fa-times" aria-hidden="true" id="cross"></i></td>
+            <td><i class="fa fa-check" aria-hidden="true" id="check"></i></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td><a href="#">Sign Up</a></td>
+            <td><a href="#">Sign Up</a></td>
+            <td><a href="#">Sign Up</a></td>
+            <td><a href="#">Sign Up</a></td>
+        </tr>
+        </tfoot>
+    </table>
+    </div>
+</body>
+</html>
