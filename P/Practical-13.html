@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <!-- jQuery library -->
+     <script src="https;//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Responsive Footer</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .main{
+            width:100%;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main h1{
+            display: inline-block;
+        }
+        footer{
+            width:100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .sec-1{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding:30px 10px;
+        }
+        .about{
+            width:40%;
+        }
+        .sec-1 h2{
+            font-size: 15px;
+            color:white;
+            text-transform: uppercase;
+        }
+        .about p{
+            text-align: justify;
+            color:grey;
+            line-height:24px;
+            margin-top: 10px;
+        }
+        .sec-1 ul{
+            list-style:none;
+        }
+        .sec-1 ul li{
+            padding: 5px;
+        }
+        a{
+            text-decoration: none;
+            color:gray;
+        }
+        a:hover{
+            color:orange;
+        }
+        span{
+            color:grey;
+        }
+        i{
+            font-size:20px;
+            color:gray;
+            margin-right: 10px;
+        }
+        .sec-2{
+            display:flex;
+            justify-content: center; 
+            padding: 10px;
+        }
+        .sec-2 p{
+            color:gray;
+            font-size: 24px;
+            padding: 0;
+        }
+        .sec-2 a{
+            display: inline-block;
+            padding: 10px 25px;
+            color:white;
+            background-color: red;
+            margin-left: 10px;
+            border-radius: 20px;
+            font-size:18px;
+            text-decoration: none;
+        }
+        .sec-2 a:hover{
+            background-color: orange;
+        }
+        .sec-3{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .sec-3 ul{
+            list-style: none;
+            margin:20px;
+        }
+        .sec-3 ul li{
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            padding: 20px;
+            background-color: #424242;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .sec-3 ul li i{
+            color:white;
+            font-size: 24px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .sec-3 ul li:nth-child(1){
+            background-color: navy;
+        }
+        .sec-3 ul li:nth-child(2){
+            background-color: skyblue;
+        }
+        .sec-3 ul li:nth-child(3){
+            background-color: red;
+        }
+        .sec-3 ul li:nth-child(4){
+            background-color:darkblue;
+        }
+        .sec-3 ul li:nth-child(5){
+            background-color:#3b5999;
+        }
+        .sec-3 ul li:hover{
+            background-color: orange;
+        }
+        .sec-4{
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            padding: 20px;
+        }
+        .sec-4 p{
+            color:gray;
+            position: relative;
+        }
+        .sec-4 p::after{
+            content:'';
+            display: block;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            right:0;
+            bottom: -10px;
+            background-color: yellow;
+            transition: all .3s;
+        }
+        .sec-4 p:hover::after{
+            width:100%;
+        }
+        hr{
+            opacity: 0.2;
+        }
+        @media(max-width: 767px){
+            .main{
+            width:100%;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main h1{
+            display: inline-block;
+        }
+        footer{
+            width:100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .sec-1{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding:30px 10px;
+        }
+        .about{
+            width:100%;
+            margin-bottom: 10px;
+        }
+        .sec-1 h2{
+            font-size: 15px;
+            color:white;
+            text-transform: uppercase;
+        }
+        .about p{
+            text-align: justify;
+            color:grey;
+            line-height:24px;
+            margin-top: 10px;
+        }
+        .sec-1 ul{
+            list-style:none;
+        }
+        .sec-1 ul li{
+            padding: 5px;
+        }
+        a{
+            text-decoration: none;
+            color:gray;
+        }
+        a:hover{
+            color:orange;
+        }
+        span{
+            color:grey;
+        }
+        i{
+            font-size:20px;
+            color:gray;
+            margin-right: 10px;
+        }
+        .sec-2{
+            display:flex;
+            justify-content: center; 
+            padding: 10px;
+        }
+        .sec-2 p{
+            color:gray;
+            font-size: 24px;
+            padding: 0;
+        }
+        .sec-2 a{
+            display: inline-block;
+            padding: 10px 25px;
+            color:white;
+            background-color: red;
+            margin-left: 10px;
+            border-radius: 20px;
+            font-size:18px;
+            text-decoration: none;
+        }
+        .sec-2 a:hover{
+            background-color: orange;
+        }
+        .sec-3{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .sec-3 ul{
+            list-style: none;
+            margin:20px;
+        }
+        .sec-3 ul li{
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            padding: 20px;
+            background-color: #424242;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .sec-3 ul li i{
+            color:white;
+            font-size: 24px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .sec-3 ul li:nth-child(1){
+            background-color: navy;
+        }
+        .sec-3 ul li:nth-child(2){
+            background-color: skyblue;
+        }
+        .sec-3 ul li:nth-child(3){
+            background-color: red;
+        }
+        .sec-3 ul li:nth-child(4){
+            background-color:darkblue;
+        }
+        .sec-3 ul li:nth-child(5){
+            background-color:#3b5999;
+        }
+        .sec-3 ul li:hover{
+            background-color: orange;
+        }
+        .sec-4{
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            padding: 20px;
+        }
+        .sec-4 p{
+            color:gray;
+            position: relative;
+        }
+        .sec-4 p::after{
+            content:'';
+            display: block;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            right:0;
+            bottom: -10px;
+            background-color: yellow;
+            transition: all .3s;
+        }
+        .sec-4 p:hover::after{
+            width:100%;
+        }
+        hr{
+            opacity: 0.2;
+        }  
+        }
+        @media(max-width:499px)
+        {
+            .main{
+            width:100%;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main h1{
+            display: inline-block;
+        }
+        footer{
+            width:100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .sec-1{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding:30px 10px;
+        }
+        .about{
+            width:100%;
+        }
+        .sec-1 h2{
+            font-size: 15px;
+            color:white;
+            text-transform: uppercase;
+            margin-top:10px;
+        }
+        .about p{
+            text-align: justify;
+            color:grey;
+            line-height:24px;
+            margin-top: 10px;
+        }
+        .sec-1 ul{
+            list-style:none;
+        }
+        .sec-1 ul li{
+            padding: 5px;
+        }
+        a{
+            text-decoration: none;
+            color:gray;
+        }
+        a:hover{
+            color:orange;
+        }
+        span{
+            color:grey;
+        }
+        i{
+            font-size:20px;
+            color:gray;
+            margin-right: 10px;
+        }
+        .sec-2{
+            display:flex;
+            justify-content: center; 
+            padding: 10px;
+        }
+        .sec-2 p{
+            color:gray;
+            font-size: 24px;
+            padding: 0;
+        }
+        .sec-2 a{
+            display: inline-block;
+            padding: 10px 25px;
+            color:white;
+            background-color: red;
+            margin-left: 10px;
+            border-radius: 20px;
+            font-size:18px;
+            text-decoration: none;
+        }
+        .sec-2 a:hover{
+            background-color: orange;
+        }
+        .sec-3{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .sec-3 ul{
+            list-style: none;
+            margin:20px;
+        }
+        .sec-3 ul li{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            background-color: #424242;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .sec-3 ul li i{
+            color:white;
+            font-size: 24px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .sec-3 ul li:nth-child(1){
+            background-color: navy;
+        }
+        .sec-3 ul li:nth-child(2){
+            background-color: skyblue;
+        }
+        .sec-3 ul li:nth-child(3){
+            background-color: red;
+        }
+        .sec-3 ul li:nth-child(4){
+            background-color:darkblue;
+        }
+        .sec-3 ul li:nth-child(5){
+            background-color:#3b5999;
+        }
+        .sec-3 ul li:hover{
+            background-color:orange;
+        }
+        
+        .sec-4{
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            padding: 20px;
+        }
+        .sec-4 p{
+            color:gray;
+            position: relative;
+        }
+        .sec-4 p::after{
+            content:'';
+            display: block;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            right:0;
+            bottom: -10px;
+            background-color: yellow;
+            transition: all .3s;
+        }
+        .sec-4 p:hover::after{
+            width:100%;
+        }
+        hr{
+            opacity: 0.2;
+        }
+        }
+    </style>
+</head>
+<body>
+    <section class="main">
+        <h1 style="color:navy">RESPONSIVE &nbsp;</h1><h1 style="color:red"> FOOTER</h1>
+    </section>
+    <footer>
+        <section class="sec-1">
+            <section class="about">
+                <h2>
+                    About
+                </h2>
+                <p>Betalabs.in CODE WANTS TO BE SIMPLE is an initiative to help the students to learn coding easily. It includes modules
+                    of HTML, CSS, PHP, Bootstrap, MongoDB, ExpressJS, Angular5. Thus the site provides a full content for these topics from basic to advance. 
+                    This site would not help to get the right content but would also help in interview preparation. 
+                </p>
+            </section>
+            <section class="link1">
+                <h2>Categories</h2>
+                <ul>
+                    <li><a href="#">C</a></li>
+                    <li><a href="#">UI Design</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">Hybrid Apps</a></li>
+                </ul>
+            </section>
+            <section class="link2">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </section>
+            <section class="link3">
+                <h2>Contact</h2>
+                <ul>
+                    <li><i class="fa fa-home"></i><span>SCO-75 Chandigarh, India</span></li>
+                    <li><i class="fa fa-envelope"></i><span>betalabsindia@gmail.com</span></li>
+                    <li><i class="fa fa-phone-square"></i><span>Mobile: 9729280731</span></li>
+                    <li><i class="fa fa-facebook-official"></i><span>betalabsindia</span></li>
+                </ul>
+            </section>
+        </section>
+            <hr width= "100%" noshade>
+            <section class="sec-2">
+                <p>Register for free</p>
+                <a href="#" >SignUp</a>
+            </section>
+            <hr width= "100%" noshade>
+            <section class="sec-3">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                </ul>   
+            </section>
+        <section class="sec-4">
+            <p>
+                Copyright @ 2020 All Rights Reserved by
+                <a href="https://www.beta-labs.in/">Beta Labs</a>
+            </p>
+        </section>
+    </footer>
+</body>
+</html>
