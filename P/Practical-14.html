@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Practical-14</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            font-weight: 40px;
+            margin:30px 20px;
+           background-color:rgba(0,0,0,0.1);
+        }
+        .content{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: row;
+        }
+        form{
+            width: 30%;
+            height: 470px;
+            background-color: white;
+            margin: 20px 15px;
+            border-radius: 2px;
+            float: left;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        h1{
+            text-transform: uppercase;
+            color:red;
+            font-size:40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+       #header{
+           height:130px;
+           width:100%;
+           background-image: linear-gradient(to right,yellow,red);
+           display: block;
+           margin-bottom: 20px;
+       }
+        #header h3{
+            color:white;
+           font-weight: bolder;
+           text-align: center;
+           padding-top: 25px;
+            margin-bottom: 20px;
+        }
+         ul{
+            list-style: none;
+            margin:20px;
+        }
+        ul li{
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            padding: 10px;
+            background-color: transparent;
+            margin-right: 0px;
+            border-collapse: collapse;
+        }
+        ul li i{
+            color:white;
+            font-size: 24px;
+            line-height: 15px;
+            text-align: center;
+        }
+        i:hover{
+            color: skyblue;
+            transition: .2s;
+        }
+       #socialsites{
+           text-align: center;
+       }
+       #socialsites2{
+           background-color: gray;
+           text-align: center;
+           padding: 5px;
+           height: 80px;
+       }
+       #socialsites3 {
+           text-align: center;
+       }
+       #socialsites3 ul li{
+            display: inline-block;
+            width: 70px;
+            height: 35px;
+            padding: 10px;
+            margin-right: 15px;
+            
+            box-shadow:   5px 8px 10px #888888;
+            border-radius: 30%;
+            text-align: center;
+        }
+        #socialsites3 >ul >li i{
+            color:#0084ff;
+            font-size: 20px;
+            line-height: 15px;
+            text-align: center;
+        }
+        #socialsites3 i:hover{
+            color: orangered;
+        }
+       form{
+           color: gray;
+           background-color: white;
+           border:10px 10px rgba(0,0,0,0.6);
+       }
+       input[type=email], input[type=password]{
+           width:100%;
+           border-top: none;
+           border-left: none;
+           border-right: none;
+           border-color: lightgray;
+           margin-bottom: 20px;
+       }
+       input[type=submit]{
+           border-top: none;
+           border-left: none;
+           border-right: none;
+           border-color: lightgray;
+       }
+       input[type=submit]{
+           width:25%;
+           margin-top: 40px;
+       }
+    
+       input[type=submit]{
+           background-color: rgb(0,0,0,0.7);
+           border-radius: 25%;
+           height:40px;
+           color:white;
+       }
+       .psw {
+        float: right;
+        text-decoration: none;
+        padding:0px 30px;
+        }
+        .psw a,span a{
+            text-decoration: none;
+        }
+        #s1>.psw::after{
+         content: '';
+         display: block;
+         clear: both;
+        }
+         a span{
+            color:black;
+            text-decoration: none;
+        }
+        div #s1{
+            padding:10px 30px;
+        }
+        
+    .content::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    label a,span a{
+        text-decoration: none;
+        font-weight: bold;
+    }
+    button{
+        padding:12px 8px;
+        color:white;
+        background-color: #ff0084;
+        border-radius: 15px;
+        width:25%;
+        border: none;
+    }
+    .fthree button:hover{
+        background-color: orangered;
+        transition: .3s;
+    }
+    .form1 button{
+        background-color: rgba(0,0,0,0.6);
+    }
+    .form1 button:hover{
+        background-color: green;
+        transition: .6s;
+    }
+    .form2 button:hover{
+        background-color: orangered;
+    }
+    .form3 input:hover{
+        border-color: #0084ff;
+    }
+  
+    .form3 button{
+        width:100%;
+        background-image:linear-gradient(to right,#0084ff,navy);
+        margin-bottom: 10px;
+    }
+    @media(max-width: 450px){
+      
+        body{
+            font-weight: 40px;
+            margin:30px 20px;
+           background-color:rgba(0,0,0,0.1);
+        }
+        .content{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+        form{
+            width: 100%;
+            height: 600px;
+            background-color: white;
+            margin: 20px 15px;
+            border-radius: 2px;
+            float: left;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin-top: 30px;
+        }
+        h1{
+            text-transform: uppercase;
+            color:red;
+            font-size:40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+       #header{
+           height:130px;
+           width:100%;
+           background-image: linear-gradient(to right,yellow,red);
+           display: block;
+           margin-bottom: 20px;
+       }
+        #header h3{
+            color:white;
+           font-weight: bolder;
+           text-align: center;
+           padding-top: 25px;
+            margin-bottom: 20px;
+        }
+         ul{
+            list-style: none;
+            margin:20px;
+        }
+        ul li{
+            display: inline-block;
+            width: 40px;
+            height: 60px;
+            padding: 10px;
+            background-color: transparent;
+            margin-right: 0px;
+        }
+        ul li i{
+            color:white;
+            font-size: 24px;
+            line-height: 15px;
+            text-align: center;
+        }
+        i:hover{
+            color: skyblue;
+            transition: .2s;
+        }
+       #socialsites{
+           text-align: center;
+       }
+       #socialsites2{
+           background-color: gray;
+           text-align: center;
+           padding: 5px;
+           height: 80px;
+       }
+       #socialsites3 {
+           text-align: center;
+       }
+       #socialsites3 ul li{
+            display: inline-block;
+            width: 50px;
+            height: 35px;
+            padding: 10px;
+            margin-right: 15px;
+            
+            box-shadow:   5px 8px 10px #888888;
+            border-radius: 30%;
+            text-align: center;
+        }
+        #socialsites3 >ul >li i{
+            color:#0084ff;
+            font-size: 20px;
+            line-height: 15px;
+            text-align: center;
+        }
+        .fthree button:hover{
+        background-color: orangered;
+        transition: .3s;
+    }
+       form{
+           color: gray;
+           background-color: white;
+           border:10px 10px rgba(0,0,0,0.6);
+       }
+       input[type=email], input[type=password]{
+           width:100%;
+           border-top: none;
+           border-left: none;
+           border-right: none;
+           border-color: lightgray;
+           margin-bottom: 20px;
+       }
+       input[type=submit]{
+           border-top: none;
+           border-left: none;
+           border-right: none;
+           border-color: lightgray;
+       }
+       input[type=submit]{
+           width:25%;
+           margin-top: 40px;
+       }
+       input[type=submit]{
+           background-color: rgb(0,0,0,0.7);
+           border-radius: 25%;
+           height:40px;
+           color:white;
+       }
+       .psw {
+        float: right;
+        text-decoration: none;
+        padding:0px 30px;
+        }
+        .psw a,span a{
+            text-decoration: none;
+        }
+        #s1>.psw::after{
+         content: '';
+         display: block;
+         clear: both;
+        }
+         a span{
+            color:black;
+            text-decoration: none;
+        }
+        div #s1{
+            padding:10px 30px;
+        }
+        
+    .content::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    label a,span a{
+        text-decoration: none;
+        font-weight: bold;
+    }
+     button{
+        padding:12px 8px;
+        color:whitesmoke;
+        background-color: #ff0084;
+        border-radius: 15px;
+        width:30%;
+        border: none;
+    }
+    .form1 button:hover{
+        background-color: green;
+        transition: .6s;
+    }
+  .form2 button:hover{
+        background-color: orangered;
+    }
+    .form1 button{
+        background-color: rgba(0,0,0,0.6);
+        width:25%;
+        height: 30px;
+        padding:5px;
+    }
+    .form3 #s1:hover{
+        border-color: #0084ff;
+    
+    }
+    .form3 button{
+        width:100%;
+        background-image:linear-gradient(to right,#0084ff,navy);
+        margin-bottom: 10px;
+    }
+    span{
+        padding-left: 0px;
+        font-size: smaller;
+    }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Form Templates</h1>
+    </header>
+    <div class="content">
+        
+    <form style=" height:470px;" class="fone">
+
+                <div id="header">
+                            <h3>Log in</h3>  
+                            <div id="socialsites">
+                            <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>    
+                            </ul>  
+                                   
+                            </div>
+                </div>
+                <div id="s1">
+                    <label for="email">Your Email</label>   <br>
+                    <input type="email" id="email" name="emailid"> 
+                    <br><br>                                    
+                </div>
+                <div  id="s1">
+                    <label for="password">Your password</label>   <br>
+                    <input type="password" id="password" name="password"> 
+                                         
+                </div>
+                <div class="psw" style="margin-bottom: 25px;">
+                  Forgot  <a href="#"><span style="font-weight: bold;">Password!</span></a>
+                  </div>
+                  <br><br><br><br>
+                  <div id="s1" class="form1">
+                    <button type="submit" class="btn">LOG IN</button>
+                   <span style="padding-left: 5px;font-size:15px">Don't have an account?<a href="#"><span style="font-weight: 30px;"> SignUp</span></a></span>
+                  </div>
+            </form>
+        
+            <form style=" height:470px;" class="ftwo">
+                           <h3 style="color:#ff0084 ;text-align: center;font-weight: bolder;padding:25px;">Sign up</h3>                           
+                <div id="s1">
+                    <label for="email">Your Email</label>   <br>
+                    <input type="email" id="email" name="emailid"> 
+                    <br><br>                                    
+                </div>
+                <div  id="s1">
+                    <label for="password">Your password</label>   <br>
+                    <input type="password" id="password" name="password"> 
+                                        
+                </div>
+                <div id="s1">
+                  <input type="checkbox" id="tandc" name= "tandc">
+                  <label for="tandc" style="padding-left: 5px;">Accept the <a href="#"><span style="color:#0084ff;">Terms and Conditions</span></a></label><br>
+                  <br><br><br>
+                  </div>
+                  <div id="s1" class="form2">
+                    <button type="submit" class="btn" id="form2">SIGN IN</button>
+                   <span style="padding-left: 20px;padding-bottom: 0px;">Have an account? <a href="#"><span style="color:#0084ff;">Log In</span></a></span>
+                  </div>
+                 
+                    <div id="socialsites2">
+                    <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>    
+                    </ul>  
+                           
+                    
+                  </div>
+            </form>
+        
+        
+            <form style=" height:470px;" class="fthree">
+                           <h3 style="color:black ;text-align: center;font-weight: bolder;padding:25px;">Sign in</h3>                           
+                <div id="s1" class="form3">
+                    <label for="email">Your Email</label>   <br>
+                    <input type="email" id="email" name="emailid"> 
+                    <br><br>                                    
+                </div>
+                <div  id="s1" class="form3">
+                    <label for="password">Your password</label>   <br>
+                    <input type="password" id="password" name="password"> 
+                                        
+                </div>
+                <div class="psw" style="margin-bottom: 25px;">
+                    <a href="#"><span style="font-weight: bold;color:#0084ff"> Forgot Password!</span></a>
+                    </div>
+                    <br><br><br><br>
+                  <div id="s1" class="form3">
+                    <button type="submit" class="btn">SIGN IN</button>
+                    
+                   <p style="text-align: center;color:gray">or Sign in with:</p>
+                  </div>
+                 
+                    <div id="socialsites3">
+                    <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>    
+                    </ul>  
+                           
+                    
+                  
+            </form>
+        </div>
+        </div>
+</body>
+</html>
