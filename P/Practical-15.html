@@ -3,94 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter page</title>
+    <title>Document</title>
     <style>
         *{
             padding: 0;
             margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: grey;
+            
         }
-    body{
-        background-color:gray;
-        color: white;
-    }
-    p{
-        text-align:center;
-        font-size: 50px;
-        font-weight: bolder;
-        margin: 50px;
-    }
-    #container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    button{
-        display: block;
-    }
+        h1{
+            color: whitesmoke;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            font-size: 55px;
+           
+            
+        }
+        #main{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+        }
     </style>
 </head>
 <body>
-    <p>COUNTER</p>
-    <div id="container">
-        <button id="btn1"></button>
-        <button id="counter"></button>
-        <button id="btn2"></button>
-    <script>
-
-        var b1= document.getElementById('btn1');
-        var b2= document.getElementById('btn2');
-        var value= document.getElementById('counter');
-
-        b1.style.width= "50px";
-        b1.style.height= "50px";
-        b1.style.backgroundColor = "darkgreen";
-        b1.innerHTML = "-";
-        b1.style.fontSize= "40px";
-        b1.style.fontWeight ="bolder";
-        b1.style.margin= "20px 40px";
-
-        b2.style.width= "50px";
-        b2.style.height= "50px";
-        b2.style.backgroundColor = "darkgreen";
-        b2.innerHTML = "+";
-        b2.style.fontSize= "40px";
-        b2.style.fontWeight ="bolder";
-        b2.style.margin= "20px 40px";
-
-        value.style.width = "40px";
-        value.style.height= "40px";
-        value.innerHTML= "0";
-        value.style.fontWeight="bolder";
-        value.style.fontSize = "55px";
-        value.style.border= "none";
-        value.style.backgroundColor= "transparent"
-
-        var count=0;
-        b1.onclick = function(){
-            if(count<=0){
-                b1.disabled= True;
-            }
-            if(count>0){
-            count= count-1;
-            }
-            value.innerHTML = count;
-            b1.style.boxShadow= "5px 5px 2px black";
-            b1.style.color = "black";
-            b1.style.backgroundColor = "darkgreen";
-            b2.style.opacity= "0.5";
-            b2.style.backgroundColor= "lightgreen";
-
-        }
-        b2.onclick = function(){
-            count= count+1;
-            value.innerHTML =count;
-            b2.style.boxShadow= "5px 5px 2px black";
-            b2.style.color = "black";
-            b2.style.backgroundColor = "darkgreen";
-            b1.style.opacity= "0.5";
-            b1.style.backgroundColor="lightgreen";
-        }
-    </script>
+    
+    <h1>Counter</h1>
+    <br>
+    <div id="main">
+        <button id="btn1" onclick></button>
+        <button id="val" ></button>
+        <button id="btn2" onclick></button>
     </div>
-</body>
-</html>
+    <script>
+        var dcr = document.getElementById("btn1");
+        var v = document.getElementById("val");
+        var inr = document.getElementById("btn2");
+
+        //styling for decrement button
+        dcr.style.width = "80px";
+        dcr.style.height = "80px";
+        dcr.style.backgroundColor="rgb(200, 255, 0)";
+        dcr.innerHTML ="-";
+        dcr.style.fontSize = "40px";
+        dcr.style.fontWeight ="bolder";
+        
+
+        //styling for increment button
+        inr.style.width = "80px";
+        inr.style.height = "80px";
+        inr.style.backgroundColor=" rgb(200, 255, 0)";
+        inr.innerHTML ="+";
+        inr.style.fontSize = "40px";
+        inr.style.fontWeight ="bolder";
+        
+
+        //styling for counter value
+        v.style.width = "80px";
+        v.style.height = "80px";
+        v.style.border= "none";
+        v.style.marginLeft = "25px";
+        v.style.marginRight = "25px";
+        v.innerHTML = "0";
+        v.style.fontSize = "55px";
+        v.style.fontWeight ="bolder";
+        v.style.color="rgb(200, 255, 0)";
+        
+        dcr.disabled=true;
+        var count = 0;
+        dcr.onclick = function(){
+            count= count-1;
+            v.innerHTML= count;
+            if(count<=0)
+            {
+                dcr.disabled=true;
+            }    
+        }
