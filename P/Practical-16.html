@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(120deg, skyblue, blue);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+h1,form{
+    height:20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 40px;
+}
+
+form input, form button{
+      padding: 10px;
+      border: none;
+      font-size: 24px;
+      background: white;
+      outline: none;
+}
+
+form button{
+    color: blue;
+    background-color: white;
+    cursor: pointer;
+}
+
+form button:hover{
+      color:white;
+      background-color: skyblue;
+}
+
+/* New List Container */
+
+.todo-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    list-style: none;
+    width:25%;
+}
+
+.todo{
+    margin:8px;
+    background-color: white;
+    color:black;
+    font-size: 24px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.todo-item{
+  flex:1; /*so that it may occupy all space*/
+  margin:0px 8px;
+}
+.check-btn,.delete-btn{
+    background-color: rgb(19,211,121);
+    color:white;
+    border:none;
+    outline: none;
+    padding: 16px;
+    font-size: 16px;
+}
+.delete-btn{
+    background-color: rgb(255,2,0);
+}
+
+.fa-check, .fa-trash{
+    pointer-events: none; /*so that this icon mayn't generate any event*/
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: .5;
+}
+    </style>
+</head>
+<body>
+    <h1>Fullstack To-Do list</h1>
+    <form>
+        <input type="text" class="todo-input">
+        <button class="todo-button">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+        </button>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list">
+            <div>
+               
+            </div>
+        </ul>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>
